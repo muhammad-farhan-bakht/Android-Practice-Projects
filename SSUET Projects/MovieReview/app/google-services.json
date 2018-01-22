@@ -1,0 +1,104 @@
+{
+  "project_info": {
+    "project_number": "1038945731328",
+    "firebase_url": "https://firstdemo-1456b.firebaseio.com",
+    "project_id": "firstdemo-1456b",
+    "storage_bucket": "firstdemo-1456b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038945731328:android:4405a06b7337f943",
+        "android_client_info": {
+          "package_name": "com.example.farhan.practicecrudwithfriebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038945731328-pfjrbg5icinpm4okir5iguas33g5b795.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjh-IoPZEuXZ0gcMVjLe0t1pfENP6lZa8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038945731328:android:fa9e505f3b7d2b1f",
+        "android_client_info": {
+          "package_name": "com.example.farhan.todoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038945731328-pfjrbg5icinpm4okir5iguas33g5b795.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjh-IoPZEuXZ0gcMVjLe0t1pfENP6lZa8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038945731328:android:6f04d6588910f56a",
+        "android_client_info": {
+          "package_name": "com.example.farhan.moviereview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038945731328-pfjrbg5icinpm4okir5iguas33g5b795.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjh-IoPZEuXZ0gcMVjLe0t1pfENP6lZa8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

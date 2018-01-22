@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LoginUI</string>
+
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="heading">SSUUET</string>
+    <string name="editText1">Type Email Address</string>
+    <string name="editText2">Type Password</string>
+    <string name="createAccount">Create Account</string>
+    <string name="loginNavigator">Already a member? Login </string>
+    <string name="name">Name</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+</resources>

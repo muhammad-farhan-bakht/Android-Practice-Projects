@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rootBackgroundColor"
+    android:orientation="vertical">
+
+    <TextView style="@style/mainHeading" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        style="@style/editText"
+        android:hint="@string/editText1" />
+
+    <EditText
+        android:id="@+id/editTextSignUp"
+        style="@style/editText"
+        android:hint="@string/editText2" />
+
+    <Button
+        style="@style/button"
+        android:onClick="login"
+        android:text="@string/login" />
+
+    <Button
+        style="@style/button"
+        android:onClick="signUp"
+        android:text="@string/sign_up" />
+
+</LinearLayout>

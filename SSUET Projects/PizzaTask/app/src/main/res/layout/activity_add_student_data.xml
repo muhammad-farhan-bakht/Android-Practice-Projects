@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.example.farhan.pizzatask.AddStudentData">
+
+
+        <ImageView
+            android:id="@+id/mImage"
+            android:layout_width="160dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:background="@color/imageViewBg"
+            android:contentDescription="@string/imgDec"
+            />
+
+        <Button
+            android:id="@+id/btnTakePic"
+            style="@style/myButtonForAddActivity"
+            android:layout_marginTop="3dp"
+            android:text="@string/btnTakePic" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/myEditText"
+            android:hint="@string/hintName"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/etMail"
+            style="@style/myEditText"
+            android:hint="@string/hintEmail"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/etNo"
+            style="@style/myEditText"
+            android:hint="@string/hintPhone"
+            android:inputType="phone"/>
+
+        <Button
+            android:id="@+id/btnInsert"
+            style="@style/myButtonForAddActivity"
+            android:layout_marginTop="20dp"
+            android:text="@string/btnInsert" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pizza Task</string>
+
+    <string name="addStdData">Add Student Data</string>
+    <string name="searchStdData">Search Student Data</string>
+    <string name="viewAllData">View All Data</string>
+
+
+    <string name="hintName">Name</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPhone">Phone No</string>
+    <string name="hintEnterName">Enter Name</string>
+
+
+    <string name="btnTakePic">Camera</string>
+    <string name="btnInsert">Insert</string>
+    <string name="btnSearch">Search</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnDeleteAll">Delete All</string>
+
+    <string name="imgDec">Image</string>
+
+    <string name="dialog_title">Confirmation</string>
+    <string name="dialog_message">Are You Sure ?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+</resources>

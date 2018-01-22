@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">To Do App SqlLite</string>
+
+    <string name="ok">Edit</string>
+    <string name="cancel">Cancel</string>
+</resources>

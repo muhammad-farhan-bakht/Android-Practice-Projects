@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="app_name">Movie Review</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="add_new">Add New</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_logIn">Log In</string>
+    <string name="btn_signUP">Sign UP</string>
+    <string name="btn_add">Add</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_admin">Admin</string>
+    <string name="hint_comment">Comment</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_genre">Genre</string>
+    <string name="hint_cast">Cast</string>
+    <string name="hint_director">Director</string>
+    <string name="hint_runTime">RunTime</string>
+    <string name="hint_URL">URL</string>
+
+    <string name="rate_us">Rate Us</string>
+
+    <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
+    <string name="no_internet_connection">No internet connection.</string>
+    <string name="img_err0r">Please add an image</string>
+    <string name="desc">Image</string>
+    <string name="read_more">Read More</string>
+
+    <string name="story_line">Story Line:</string>
+    <string name="genre">Genre:</string>
+    <string name="cast">Cast:</string>
+    <string name="director">Director:</string>
+    <string name="run_time">Runtime:</string>
+
+    <string name="comment">Comment</string>
+    <string name="ok">OK</string>
+    <string name="notNow">NOT NOW</string>
+    <string name="dialog_Title">Share Your Experience</string>
+    <string name="people_who_rated_us">People Who Rated Us</string>
+    <string name="_10">/10</string>
+    <string name="date">Date</string>
+
+</resources>

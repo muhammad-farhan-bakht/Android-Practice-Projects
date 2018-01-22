@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#212121">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.example.farhan.moviereview.AddNew"
+        android:focusableInTouchMode="true"
+        android:background="#212121">
+
+        <ImageView
+            android:id="@+id/mImg"
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background"
+            android:clickable="true"
+            android:contentDescription="@string/desc"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_add_a_photo_black_24dp" />
+
+        <TextView
+            android:id="@+id/imageViewSetError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#ff0000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etMovieName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etMovieDec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/hint_description"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etMovieGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/hint_genre"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etMovieCast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/hint_cast"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etMovieDirector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/hint_director"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etMovieUrl"
+                android:inputType="textUri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/hint_URL"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/etMovieRunTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/hint_runTime"
+                android:textColorHint="#fff"
+                android:textColor="#fff"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="5dp"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/movieInitialRating"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:scaleX="0.9"
+                    android:scaleY="0.9"
+                    android:theme="@style/RatingBar"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="@integer/google_play_services_version" />
+
+                <TextView
+                    android:id="@+id/showRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:background="@drawable/round_button"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:text="@string/btn_add" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
