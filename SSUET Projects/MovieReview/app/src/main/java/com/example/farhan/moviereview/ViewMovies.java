@@ -39,7 +39,6 @@ public class ViewMovies extends AppCompatActivity {
     private String userName;
     private int checkAdmin;
     String uid;
-    float counter = 0.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,42 +130,16 @@ public class ViewMovies extends AppCompatActivity {
 
                 Log.e("onChildAdded ", "onChildAdded: movies.getKey " + (movies.getKey()));
 
-                /*myRef.child(movies.getKey()).child("Ratings").addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        Rating ob = dataSnapshot.getValue(Rating.class);
-                        ArrayList<Rating> ar = new ArrayList<>();
-                        ar.add(ob);
-                        for (int i = 0; i > ar.size(); i++) {
-                            counter += (ar.get(i).getRating()) / i;
-                            Log.e("onChildAdded for", "onChildAdded: " + counter);
-                            moviesArrayAdapter.notifyDataSetChanged();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });*/
-
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                /*Movies movies = dataSnapshot.getValue(Movies.class);
-                int index = moviesArrayList.indexOf(movies);
-                moviesArrayList.set(index, movies);
-                loadingIndicator.setVisibility(View.GONE);
-                moviesArrayAdapter.notifyDataSetChanged();*/
+
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-                /*Movies movies = dataSnapshot.getValue(Movies.class);
-                moviesArrayList.remove(movies);
-                loadingIndicator.setVisibility(View.GONE);
-                moviesArrayAdapter.notifyDataSetChanged();*/
+
             }
 
             @Override
@@ -225,5 +198,10 @@ public class ViewMovies extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 }
