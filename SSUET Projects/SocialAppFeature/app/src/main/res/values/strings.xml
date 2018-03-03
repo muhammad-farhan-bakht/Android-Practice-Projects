@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Social App Feature</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_signUp_now">Don\'t have an account ? SignUp now..!</string>
+    <string name="username">Username</string>
+    <string name="sign_up">Sign up</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="share_post">Share Post</string>
+    <string name="write_your_post">Write your post</string>
+    <string name="from">From:</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="select_image">select image</string>
+    <string name="date">Date</string>
+    <string name="desc">Image</string>
+    <string name="sign_out">SignOut</string>
+</resources>
