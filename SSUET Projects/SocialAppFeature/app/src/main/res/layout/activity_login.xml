@@ -58,7 +58,6 @@
         android:id="@+id/tvNoInternetError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/no_internet_connection_found"
         android:layout_centerInParent="true"
         android:textSize="20sp"
         android:textColor="#454545"

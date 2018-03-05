@@ -12,6 +12,12 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.farhan.socialappfeature.Models.Post;
 import com.example.farhan.socialappfeature.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -25,10 +31,13 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     private Context context;
     private customButtonListener customCommentListener;
     private customButtonListener customLikeListener;
+    DatabaseReference mRefLike;
+    FirebaseAuth mAuth;
 
     // To Cr8 Custom OnClickListener on RCView
     public interface customButtonListener {
         void onCommentButtonClickListener(int position);
+
         void onLikeButtonClickListener(int position);
     }
 
@@ -48,6 +57,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         ImageButton btnLike;
         ImageButton btnComment;
 
+
         public RvCustomViewHolder(View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.postUserName);
@@ -55,7 +65,13 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             postImage = itemView.findViewById(R.id.postImage);
             btnLike = itemView.findViewById(R.id.btnLike);
             btnComment = itemView.findViewById(R.id.btnComment);
+
+            mAuth = FirebaseAuth.getInstance();
+            mRefLike = FirebaseDatabase.getInstance().getReference().child("Likes");
+
         }
+
+
     }
 
     public CustomRecyclerViewAdapter(Context context, ArrayList<Post> postArrayList) {
@@ -72,16 +88,10 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     @Override
     public void onBindViewHolder(final RvCustomViewHolder holder, final int position) {
 
-        Post postObj = postArrayList.get(position);
+        final Post postObj = postArrayList.get(position);
         holder.userName.setText(postObj.getUserName());
         holder.postText.setText(postObj.getPostText());
         Glide.with(context).load(postObj.getPostImgURL()).into(holder.postImage);
-
-        if (postObj.isCheckLike().equals("t")) {
-            holder.btnLike.setBackground(context.getResources().getDrawable(R.drawable.is_like_true));
-        } else {
-            holder.btnLike.setBackground(context.getResources().getDrawable(R.drawable.is_like_false));
-        }
 
         holder.btnComment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,20 +102,39 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             }
         });
 
+
         holder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (customLikeListener != null) {
                     customLikeListener.onLikeButtonClickListener(position);
-                    holder.btnLike.setImageResource(R.drawable.is_like_true);
                 }
             }
         });
+
+        mRefLike.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                if (dataSnapshot.child(postObj.getKey()).hasChild(mAuth.getCurrentUser().getUid())) {
+                    holder.btnLike.setImageResource(R.drawable.is_like_true);
+                } else {
+                    holder.btnLike.setImageResource(R.drawable.is_like_false);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     @Override
     public int getItemCount() {
         return postArrayList.size();
     }
+
 
 }

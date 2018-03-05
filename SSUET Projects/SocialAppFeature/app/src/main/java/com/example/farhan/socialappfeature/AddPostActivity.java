@@ -117,7 +117,7 @@ public class AddPostActivity extends AppCompatActivity {
                         Uri downloadUrl = taskSnapshot.getDownloadUrl();
                         String downloadUrlStr = downloadUrl.toString();
 
-                        Post postObj = new Post(userName, text, downloadUrlStr, userID,"f");
+                        Post postObj = new Post(userName, text, downloadUrlStr, userID);
                         key = myRef.push().getKey();
                         postObj.setKey(key);
                         myRef.child(key).setValue(postObj);

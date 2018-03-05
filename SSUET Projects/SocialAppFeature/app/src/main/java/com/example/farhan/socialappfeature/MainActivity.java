@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements
     ProgressBar progressBar;
 
     DatabaseReference myRef;
+    DatabaseReference mRefLike;
+    FirebaseAuth mAuth;
     ArrayList<Post> postArrayList;
     RecyclerView recyclerView;
     CustomRecyclerViewAdapter mAdapter;
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements
     CommentAdapter commentAdapter;
     Post postKey;
     private String userName;
+
+    private Boolean mProcessLike = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+
     }
 
     // Method to init Major's Things
@@ -116,8 +121,10 @@ public class MainActivity extends AppCompatActivity implements
 
         // Connect to FireBase DataBASE
         FirebaseDatabase fDB = FirebaseDatabase.getInstance();
-        myRef = fDB.getReference();
+        mAuth = FirebaseAuth.getInstance();
+        myRef = FirebaseDatabase.getInstance().getReference();
         postArrayList = new ArrayList<>();
+        mRefLike = FirebaseDatabase.getInstance().getReference().child("Likes");
 
         // Connect to Auth to get Current User UID
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -242,9 +249,31 @@ public class MainActivity extends AppCompatActivity implements
     // Custom onClick Like ImageButton
     @Override
     public void onLikeButtonClickListener(int position) {
-        Post postLikeBtnCheck = postArrayList.get(position);
-        myRef.child("Posts").child(postLikeBtnCheck.getKey()).child("checkLike").setValue("t");
+        final Post postKey = postArrayList.get(position);
+        mProcessLike = true;
+
+        mRefLike.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (mProcessLike) {
+                    if (dataSnapshot.child(postKey.getKey()).hasChild(mAuth.getCurrentUser().getUid())) {
+                        mRefLike.child(postKey.getKey()).child(mAuth.getCurrentUser().getUid()).removeValue();
+                        mProcessLike = false;
+                    } else {
+                        mRefLike.child(postKey.getKey()).child(mAuth.getCurrentUser().getUid()).setValue("Like");
+                        mProcessLike = false;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
     }
+
 
     //add Item menu in MenuBar
     @Override

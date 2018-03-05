@@ -10,17 +10,15 @@ public class Post {
     private String postImgURL;
     private String userID;
     private String key;
-    private String checkLike;
 
     public Post() {
     }
 
-    public Post(String userName, String postText, String postImgURL, String userID, String checkLike) {
+    public Post(String userName, String postText, String postImgURL, String userID) {
         this.userName = userName;
         this.postText = postText;
         this.postImgURL = postImgURL;
         this.userID = userID;
-        this.checkLike = checkLike;
     }
 
     public String getKey() {
@@ -63,11 +61,4 @@ public class Post {
         this.userID = userID;
     }
 
-    public String isCheckLike() {
-        return checkLike;
-    }
-
-    public void setCheckLike(String checkLike) {
-        this.checkLike = checkLike;
-    }
 }
