@@ -1,9 +1,12 @@
 package com.example.farhan.practicekotlinrecyclearview
 
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,8 +32,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = customRCView
 
 
-
-/*        btn_Show.setOnClickListener {
+        /*btn_Show.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             val view = layoutInflater.inflate(R.layout.reservation_dialog_view, null)
 

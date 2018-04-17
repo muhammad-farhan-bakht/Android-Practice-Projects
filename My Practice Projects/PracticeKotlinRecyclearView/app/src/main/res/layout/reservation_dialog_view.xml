@@ -2,16 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_reservation_dialog_view_corners">
+    android:background="#000">
 
-    <ImageButton
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/bg_reservation_dialog_cancel_btn"
-        android:scaleType="center"
-        android:src="@drawable/img_cancel"/>
 
     <LinearLayout
         android:id="@+id/rooLinear"
@@ -19,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
+        android:background="#fff"
         android:orientation="vertical">
 
         <TextView
@@ -184,7 +176,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/rooLinear"
+        android:layout_marginTop="40dp"
         android:background="#ff4954"
         android:orientation="horizontal">
 
@@ -215,4 +208,15 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="-10dp"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/bg_reservation_dialog_cancel_btn"
+        android:scaleType="center"
+        android:src="@drawable/img_cancel" />
 </RelativeLayout>
