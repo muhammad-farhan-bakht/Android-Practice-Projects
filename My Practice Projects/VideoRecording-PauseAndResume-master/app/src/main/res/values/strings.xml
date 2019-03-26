@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VideoRecording</string>
+
+    <string name="filter_none">None</string>
+    <string name="filter_adore">Adore</string>
+    <string name="filter_heart">Heart</string>
+    <string name="filter_perfume">Perfume</string>
+    <string name="filter_responsible">Responsible</string>
+    <string name="saving">Saving</string>
+
+</resources>
